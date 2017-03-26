@@ -1,1 +1,3 @@
-# mern
+run :
+
+npm run dev
