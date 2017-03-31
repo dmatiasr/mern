@@ -1,0 +1,32 @@
+<div class="container" ng-controller=UserController>
+  <div >
+  <strong><small>usuario:{{userlog}}</small></strong>
+  </div>
+  <div>
+  <form class="form-group">
+    <tr>
+      <td>
+        <label  for="username">Nombre de usuario</label>
+        <input class="form-control" type="text" placeholder="Nombre de usuario" ng-model="user.username">
+      </td>
+      <td>
+        <label for="password">Contraseña</label>
+        <input class="form-control" type="password" placeholder="Contraseña" ng-model="user.password">
+      </td>
+      <td>
+        <button class="btn btn-info" type="button" ng-click="login()">Iniciar Sesion</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div ng-show="msg=='Login correcto'">
+              <strong class="alert alert-success">{{msg}}</strong>
+        </div>
+        <div ng-show="msg=='Login incorrecto'">
+              <strong class="alert alert-danger">{{msg}}</strong>
+        </div>
+
+      </td>
+    </tr>
+  </form>
+</div>

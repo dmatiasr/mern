@@ -1,0 +1,38 @@
+<div class="container" >
+  <div ng-controller=UserController>
+  <form class="form-group">
+      <tr>
+        <td>
+          <label  for="UserName">Nombre de usuario</label>
+          <input class="form-control" type="text"  ng-model="user.username">
+        </td>
+        <td>
+          <label  for="Nombre">Nombre</label>
+          <input class="form-control" type="text"  ng-model="user.name">
+        </td>
+        <td>
+          <label for="Email">Email</label>
+          <input class="form-control" type="email"  ng-model="user.email">
+        </td>
+        <td>
+          <label for="Password">Password</label>
+          <input class="form-control" type="password" ng-model="user.password">
+        </td>
+        <td>
+          <button type="button" class="btn btn-info" ng-click="register()" > Registrarse</button>
+        </td>
+        <td>
+          <div class="">
+            <div ng-show="msg=='Registro exitoso'">
+              <strong class="alert alert-success" >{{msg}}</strong>
+            </div>
+            <div ng-show="msg=='Nombre de usuario existente'">
+                <strong class="alert alert-danger">{{msg}}</strong>
+            </div>
+          </div>
+        </td>
+
+      </tr>
+    </form>
+  </div>
+</div>

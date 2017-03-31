@@ -1,0 +1,25 @@
+extends layout
+
+block content
+ h1= title
+ form(method='post')
+  label Nombre
+  input(type='text', name='name')
+  label email
+  input(type='text', name='email')
+  label Password
+  input(type='password', name='password')
+  input(type='submit',value='Registrar')
+ ul#emails
+  each item in allusers
+   li= item.id +" - "+ item.name+" - "+item.email+" - "+item.pass
+ form(method='post')
+  label ingrese id
+  input(type='text', name='id')
+  label Nombre A actualizar
+  input(type='text', name='name')
+  label email a actualizar
+  input(type='text', name='email')
+  label Password a actualizar
+  input(type='password', name='password')
+  input(type='submit',value='Actualizar')
